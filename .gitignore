@@ -1,0 +1,9 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Nada más: este proyecto no usa node_modules ni archivos generados.

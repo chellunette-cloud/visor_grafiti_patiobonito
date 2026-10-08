@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visor de Grafitis — Patio Bonito, Bogotá</title>
+  <meta name="description"
+        content="Explora el arte urbano del sector de Patio Bonito en Bogotá: mapa, listado, búsqueda, filtros y enlaces a Google Maps.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23262023'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%2322d3ee'%3E%26%239996;%3C/text%3E%3C/svg%3E">
+  <!-- Única dependencia externa: Leaflet (CDN). Sin API keys, sin build. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <p class="encabezado-kicker">Arte urbano en los muros del suroccidente</p>
+    <h1>Visor de Grafitis</h1>
+    <p class="encabezado-subtitulo">Patio Bonito — Bogotá</p>
+    <p class="encabezado-descripcion">
+      Explora el arte urbano de Patio Bonito y descubre las historias detrás de sus muros.
+    </p>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Buscar y filtrar grafitis">
+      <label class="buscador" for="search-input">
+        <span class="sr-only">Buscar grafitis, artistas o lugares</span>
+        <input id="search-input" type="search" placeholder="Buscar grafitis, artistas o lugares..."
+               autocomplete="off">
+      </label>
+
+      <div id="filter-buttons" class="filtros" role="group" aria-label="Filtrar por categoría"></div>
+    </section>
+
+    <section class="layout">
+      <div id="map" class="mapa" role="application" aria-label="Mapa de Patio Bonito con los grafitis"></div>
+
+      <aside class="listado" aria-label="Listado de grafitis">
+        <h2>Listado</h2>
+        <div id="empty-state" hidden>
+          <p>No encontramos grafitis con esa búsqueda o filtro. Intenta con otro término.</p>
+        </div>
+        <div id="graffiti-list" class="grilla-tarjetas"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <h2>Sobre este visor</h2>
+    <p>
+      Este proyecto busca visibilizar el arte urbano de Patio Bonito y facilitar la exploración
+      de sus ubicaciones, mostrando el sector sobre un mapa con sus puntos de referencia.
+    </p>
+    <p class="nota">
+      Las ubicaciones mostradas pueden ser aproximadas. Consulta Google Maps para explorar
+      el entorno de cada punto.
+    </p>
+    <p class="atribucion">
+      Mapa y datos: &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors (ODbL).
+    </p>
+  </footer>
+
+  <div id="detalle" class="detalle" role="dialog" aria-modal="true" aria-label="Información del grafiti" aria-hidden="true" inert></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="data/graffitis.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

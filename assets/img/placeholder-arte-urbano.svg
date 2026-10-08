@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250" role="img" aria-label="Imagen no disponible">
+  <rect width="400" height="250" fill="#2a2724"/>
+  <path d="M0 45 H400 M0 95 H400 M0 145 H400 M0 195 H400" stroke="#3a3632" stroke-width="3"/>
+  <path d="M0 0 H400 V250 H0 Z" fill="none" stroke="#a3e635" stroke-width="2" opacity="0.4"/>
+  <rect x="110" y="58" width="180" height="134" fill="#1d1b18" stroke="#a3e635" stroke-width="4"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="18" font-weight="bold" fill="#a3e635">ARTE URBANO</text>
+  <text x="200" y="140" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#a8a29e">Imagen no disponible</text>
+  <text x="200" y="162" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#a8a29e">placeholder del visor</text>
+</svg>
